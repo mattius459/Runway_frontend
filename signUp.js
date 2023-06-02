@@ -11,7 +11,7 @@ submitUserPW.addEventListener("click", async function () {
 
     //const credentials = {userName, password}
     //const url = 'http://localhost:3000/create/';
-    const url = 'https://runway-app2.herokuapp.com/';
+    const url = 'https://runway-app2.herokuapp.com/create';
     const data = {
     userName: userName,
     password: password
