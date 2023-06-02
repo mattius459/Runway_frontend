@@ -1,0 +1,412 @@
+@media (min-width: 501px) {
+
+body {
+  display:grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 200px;
+  grid-gap: 10px;
+
+}
+
+#plotly_chart {
+  width:100%;
+}
+
+.runway_header {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+h1 {
+  font-size: 55px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+
+#points {
+  text-align: right;
+}
+
+h3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-content: left;
+  font-size: 15px;
+}
+
+input {
+  padding:10px;
+}
+
+#age_div {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#age {
+  width: 15%
+}
+
+#monthly_income_div {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+#monthly_spend_div {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+#current_investments_div {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+#plotly_chart {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 16;
+}
+
+#placeholder_runway {
+  padding: 2px 2px 2px 2px;
+}
+
+/* Collapsible button */
+.collapsible {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  background-color: rgb(185, 185, 185);
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  white-space: normal;
+}
+
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  margin: auto 0;
+}
+
+.letter {
+  color: #000000;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.input_and_tooltip {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  gap: 16px;
+}
+
+.slider {
+  width: 70%;
+}
+
+.slider-output {
+  font-size: 15px;
+}
+
+
+/* Popup Stuff */
+.popup {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Popup Stuff */
+.popup .popuptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 30%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 5fr 1fr;
+    gap: 10px;
+    background-color:  #efeded;
+    /* height: 100vh; */
+  }
+
+  #mainChart {
+    width:100%;
+  }
+  
+  h1 {
+    font-size: 55px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+  }
+  
+  #points {
+    text-align: right;
+  }
+  
+  h3 {
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    font-size: 15px;
+  }
+  
+  input {
+    width: 36%;
+    padding:10px;
+    /* margin: auto 0; */
+  }
+  
+  #age {
+    width: 15%;
+  }
+  
+  #placeholder_runway {
+    padding: 2px 2px 2px 2px;
+    width: 100%;
+  }
+  
+  /* Collapsible button */
+  .collapsible {
+    background-color: rgb(185, 185, 185);
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    white-space: normal;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    margin: auto 0;
+  }
+  
+  .letter {
+    color: #000000;
+    font-size: 11px;
+    font-weight: bold;
+  }
+  
+  .input_and_tooltip {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    gap: 16px;
+  }
+  
+  .slider {
+    width: 70%;
+  }
+  
+  .slider-output {
+    font-size: 15px;
+  }
+  
+  
+  /* Popup Stuff */
+  .popup {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Popup Stuff */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 30%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+  
+  } /* End mobile media query */
+
+
+/* 
+
+To do:
+
+
+Questions:
+
+- How to get the CSS grid to show up in the inspector?
+- Why are the input boxes in top left 
+
+
+
+ */

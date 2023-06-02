@@ -1,0 +1,45 @@
+* {
+    padding: 10px 10px 0px 10px;
+    box-sizing: border-box;
+    background-color:  #efeded;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+  }
+
+li {
+
+    padding: 10px;
+}
+
+p {
+    font-size: 16px;
+    padding: 0px 10px 0px 10px;
+}
+a {
+    color: black; /* Change the color to your preferred value */
+  }
+
+  .horizontal-line {
+    border: none;
+    border-top: 1px solid black;
+    margin: 20px 0; /* Adjust the margin as needed */
+  }
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    padding: 10px 10px 10px 10px;
+    margin: 0 auto;
+  }
+
+  div {
+    padding: 50px 10px 10px 10px;
+  }
