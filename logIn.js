@@ -9,7 +9,7 @@ submitlogInUserPW.addEventListener("click", async function () {
 
 
     //const url = 'http://localhost:3000/logIn/';
-    const url = 'https://runway-app2.herokuapp.com/';
+    const url = 'https://runway-app2.herokuapp.com/logIn';
     
     const data = {
     userName: userName,
