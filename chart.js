@@ -47,8 +47,8 @@ function render_chart(net_worth_traces_data){
                     
                     if (i == 1) {
                         //This trace is the one in which life expectancy is first achieved
-                        net_worth_traces[trace - i].line.dash = 'solid';
-                        net_worth_traces[trace - i].line.color = 'green';
+                        net_worth_traces[trace].line.dash = 'solid';
+                        net_worth_traces[trace].line.color = 'green';
                         //y_axes_max is set here and will be used to set the max chart height
                         y_axes_max = Math.max(...net_worth_traces[trace].y);
                     }
