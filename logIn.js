@@ -7,9 +7,8 @@ submitlogInUserPW.addEventListener("click", async function () {
     userName = userName.value;
     password = password.value;
 
-
-    //const url = 'http://localhost:3000/logIn/';
-    const url = 'https://runway-app2.herokuapp.com/logIn';
+    const url = 'http://localhost:3000/logIn/';
+    //const url = 'https://runway-app2.herokuapp.com/logIn';
     
     const data = {
     userName: userName,
@@ -36,6 +35,7 @@ submitlogInUserPW.addEventListener("click", async function () {
             localStorage.setItem('EI', response.EI);
             localStorage.setItem('EEA', response.EEA);
             localStorage.setItem('LE', response.LE);
+            localStorage.setItem('_id', response._id);
 
             setTimeout(() => {
             window.location.href = "index.html";
@@ -53,7 +53,6 @@ submitlogInUserPW.addEventListener("click", async function () {
 
 - set MNI to localstorage
 - Have 
-
 - 
 
 

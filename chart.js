@@ -87,7 +87,6 @@ function render_chart(net_worth_traces_data){
             range: [0, y_axes_max * 1.5]
         }
     }
-    console.log(y_axes_max)
     Plotly.newPlot('plotly_chart', data, layout, {displayModeBar: false});
 }
 
