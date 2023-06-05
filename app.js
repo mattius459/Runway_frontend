@@ -84,7 +84,7 @@ function input_becomes_slider(input_box, input_box_div){
 //Create event listener to update database when slider is changed
 slider.addEventListener("change", async function() {
 
-  const url = 'http://localhost:3000/update';
+  const url = 'https://runway-app2.herokuapp.com/update';
   const data = {
     value: this.value,
     slider_id: this.id,
@@ -156,7 +156,7 @@ if (localStorage.getItem('loggedIn') === 'true') {
     DeleteAcctBtn.addEventListener('click', deleteAcct);
     runway_header.appendChild(DeleteAcctBtn);
     async function deleteAcct() {
-      const url = 'http://localhost:3000/deleteUser';
+      const url = 'https://runway-app2.herokuapp.com/deleteUser';
       const data = {
         userEmail: localStorage.getItem('userEmail')
         };
