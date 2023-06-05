@@ -96,7 +96,7 @@ slider.addEventListener("change", async function() {
         'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)
-    }).then(console.log(response))
+    })
 })
 };
 
