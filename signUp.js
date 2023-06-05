@@ -8,7 +8,7 @@ submitUserPW.addEventListener("click", async function () {
     password = password.value;
 
     //Create onchange event listener and feed in password input so it continuously checks
-
+    
     //const credentials = {userName, password}
     //const url = 'http://localhost:3000/create/';
     const url = 'https://runway-app2.herokuapp.com/create';
