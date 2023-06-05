@@ -6,7 +6,7 @@ let y_axes_max = 0
 window.addEventListener('net_worth_array_change', function(event) {
     const net_worth_traces_data = event.detail;
     //Create month array to use in X axis
-
+    console.log("render")
     net_worth_traces = render_chart(net_worth_traces_data);
 });
 

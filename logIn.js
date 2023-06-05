@@ -7,8 +7,8 @@ submitlogInUserPW.addEventListener("click", async function () {
     userName = userName.value;
     password = password.value;
 
-    const url = 'http://localhost:3000/logIn/';
-    //const url = 'https://runway-app2.herokuapp.com/logIn';
+    //const url = 'http://localhost:3000/logIn/';
+    const url = 'https://runway-app2.herokuapp.com/logIn';
     
     const data = {
     userName: userName,
@@ -37,12 +37,20 @@ submitlogInUserPW.addEventListener("click", async function () {
             localStorage.setItem('LE', response.LE);
             localStorage.setItem('_id', response._id);
 
+            let message_output = document.createElement('p');
+            message_div.textContent = '';
+            message_output.textContent = "Log in successful... rerouting to homepage"
+            message_div.appendChild(message_output);
+
             setTimeout(() => {
             window.location.href = "index.html";
             }, 2000);
             
-        } else {
-            console.log(response.message)
+        } else if (response.message === "Log in unsuccessful... try again"){
+            let message_output = document.createElement('p');
+            message_div.textContent = '';
+            message_output.textContent = "Log in unsuccessful... try again"
+            message_div.appendChild(message_output);
         }
     })
 });
@@ -50,12 +58,6 @@ submitlogInUserPW.addEventListener("click", async function () {
 
 
 /*
-
-- set MNI to localstorage
-- Have 
-- 
-
-
 
 
 

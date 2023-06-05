@@ -19,6 +19,8 @@ logIn.addEventListener("click", function () {
 const submitBtn = document.getElementById("submitBtn")
 submitBtn.addEventListener("click", function() {
   const age = document.querySelector('#age');
+  const age_div = document.querySelector('#age_div');
+
   const monthly_income = document.querySelector('#monthly_income');
   const monthly_income_div = document.querySelector('#monthly_income_div');
 
@@ -28,10 +30,10 @@ submitBtn.addEventListener("click", function() {
   const current_investments = document.querySelector('#current_investments');
   const current_investments_div = document.querySelector('#current_investments_div');
 
+
   input_becomes_slider(monthly_income, monthly_income_div);
   input_becomes_slider(monthly_spend, monthly_spend_div);
   input_becomes_slider(current_investments, current_investments_div);
-
 })
 
 
@@ -50,6 +52,7 @@ function input_becomes_slider(input_box, input_box_div){
   if (input_box.id === 'current_investments') {
     slider.step = 1000;
   }
+
   //Create output number on slider
   const sliderOutput = document.createElement('output');
   sliderOutput.className = "slider-output";
@@ -64,6 +67,7 @@ function input_becomes_slider(input_box, input_box_div){
   slider.addEventListener("input", function() {
     sliderOutput.innerHTML = this.value;
     let sliderValue = this.value;
+
     if (input_box_div.id === 'current_investments_div') {
       TA = new CustomEvent('currentInvestmentsSlider', { detail: sliderValue });
       window.dispatchEvent(TA);
@@ -179,9 +183,5 @@ if (localStorage.getItem('loggedIn') === 'true') {
     }
 
   submitBtn.click();
-
-
-
-  
 
 }

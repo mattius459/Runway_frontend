@@ -5,6 +5,8 @@
 let currentAge = 26;
 let lifeExpectancy = 90;
 
+
+
 //Monthly Net Income
 let MNI_input = 4000;
 window.addEventListener('monthlyIncomeSlider', function(event) {
@@ -24,7 +26,7 @@ window.addEventListener('monthlySpendSlider', function(event) {
 });
 
 //Total assets
-let TA_input = 200000;
+let TA_input = 25000;
 window.addEventListener('currentInvestmentsSlider', function(event) {
     TA_input = Number(event.detail);
     let net_worth_traces_data = computeChartData();
@@ -56,6 +58,7 @@ let MNIIR = (1 + SI)**(1/12) - 1 //Monthly Net Income Increase Rate
 let TF = 0.15
 
 /* CALCULATION */
+
 
 //Create an array which has the user's projected net worth each month
 function computeChartData() {
